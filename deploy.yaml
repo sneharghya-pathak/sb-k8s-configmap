@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sb-k8s-app-node
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sb-k8s-app-node
+  template:
+    metadata:
+      labels:
+        app: sb-k8s-app-node
+    spec:
+      containers:
+      - name: sb-k8s-app
+        imagePullPolicy: IfNotPresent
+        image: pathaks/sb-k8s-app:v1
+        volumeMounts:
+        - mountPath: /etc/config
+          name: config-volume
+      volumes:
+        - name: config-volume
+          configMap:
+            name: sb-k8s-app-cm
+          
