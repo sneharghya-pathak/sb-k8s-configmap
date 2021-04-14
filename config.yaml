@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sb-k8s-app-cm
+data:
+  application.yml: |
+    webpage:
+      message: Hello from configmap

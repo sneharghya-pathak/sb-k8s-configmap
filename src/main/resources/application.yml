@@ -1,2 +1,7 @@
 webpage:
   message: Hello from application.yml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
