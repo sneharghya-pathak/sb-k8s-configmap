@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sb-k8s-app-node
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: sb-k8s-app-node
