@@ -17,7 +17,7 @@ spec:
         imagePullPolicy: IfNotPresent
         image: pathaks/sb-k8s-app:v1
         volumeMounts:
-        - mountPath: /
+        - mountPath: /sbapp
           name: config-volume
       volumes:
         - name: config-volume
